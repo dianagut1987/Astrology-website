@@ -2,14 +2,102 @@
 
 <html lang="en" dir="rtl"> 
 <head>
-    <meta charset="utf-8" />
     <title>עבודת סיכום</title>
+    <meta charset="utf-8" />
+    <script src="jquery.js"></script>
+
+    <script>
+        function redirect() {
+            var linkVar = document.getElementById('sign').getAttribute('href');
+            window.location.href = linkVar + '#' + $("input[name='starSign']:checked").val() + $("input[name='period']:checked").val();
+            if (Document.getElementById('sign').checked == false && Document.getElementById('period').checked == false)
+                alert ("לא נבחר מזל או תחזית")
+        }
+    </script>
+
+
+    <script>
+
+
+
+                //function redirect() {
+                //    if (document.getElementById("Aries").checked == true && document.getElementById("week").checked == true) {
+                //        window.location.href = 'Aries.html#AriesWeek';
+                //    }
+                //    else if (document.getElementById("Taurus").checked == true && document.getElementById("week").checked == true) {
+                //        window.location.href = 'Taurus.html#TaurusWeek';
+                //    }
+                //    else if (document.getElementById("Gemini").checked == true && document.getElementById("week").checked == true) {
+                //        window.location.href = 'Gemini.html#GeminiWeek';
+                //    }
+                //    else if (document.getElementById("Cancer").checked == true && document.getElementById("week").checked == true) {
+                //        window.location.href = 'Cancer.html#CancerWeek';
+                //    }
+                //    else if (document.getElementById("Leo").checked == true && document.getElementById("week").checked == true)
+                //        window.location.href = 'Leo.html#LeoWeek';
+                //    else if (document.getElementById("Virgo").checked == true && document.getElementById("week").checked == true)
+                //        window.location.href = 'Virgo.html#VirgoWeek';
+                //    else if (document.getElementById("Libra").checked == true && document.getElementById("week").checked == true)
+                //        window.location.href = 'Libra.html#LibraWeek';
+                //    else if (document.getElementById("Scorpio").checked == true && document.getElementById("week").checked == true)
+                //        window.location.href = 'Scorpio.html#ScorpioWeek';
+                //    else if (document.getElementById("Sagittarius").checked == true && document.getElementById("week").checked == true)
+                //        window.location.href = 'Sagittarius.html#SagittariusWeek';
+                //    else if (document.getElementById("Capricon").checked == true && document.getElementById("week").checked == true)
+                //        window.location.href = 'Capricon.html#CapriconWeek';
+                //    else if (document.getElementById("Aquarius").checked == true && document.getElementById("week").checked == true)
+                //        window.location.href = 'Aquarius.html#AquariesWeek';
+                //    else if (document.getElementById("Pisces").checked == true && document.getElementById("week").checked == true) {
+                //        window.location.href = 'Pisces.html#PiscesWeek';
+
+                //    }
+
+                //    else if (document.getElementById("Aries").checked == true && document.getElementById("month").checked == true)
+                //       window.location.href = 'Aries.html#AriesMonth';
+                //    else if (document.getElementById("Taurus").checked == true && document.getElementById("month").checked == true)
+                //       window.location.href = 'Taurus.html#TaurusMonth';
+                //    //else if (document.getElementById("Gemini").checked == true && document.getElementById("month").checked == true)
+                //    //    window.location.href = 'Gemini.html#weekly';
+                //    //else if (document.getElementById("Cancer").checked == true && document.getElementById("month").checked == true)
+                //    //    window.location.href = 'Cancer.html#month';
+                //    //else if (document.getElementById("Leo").checked == true && document.getElementById("month").checked == true)
+                //    //    window.location.href = 'Leo.html#month';
+                //    //else if (document.getElementById("Virgo").checked == true && document.getElementById("month").checked == true)
+                //    //    window.location.href = 'Virgo.html#month';
+                //    //else if (document.getElementById("Libra").checked == true && document.getElementById("month").checked == true)
+                //    //    window.location.href = 'Libra.html#month';
+                //    //else if (document.getElementById("Scorpio").checked == true && document.getElementById("month").checked == true)
+                //    //    window.location.href = 'Scorpio.html#month';
+                //    //else if (document.getElementById("Sagittarius").checked == true && document.getElementById("month").checked == true)
+                //    //    window.location.href = 'Sagittarius.html#month';
+                //    //else if (document.getElementById("Capricon").checked == true && document.getElementById("month").checked == true)
+                //    //    window.location.href = 'Capricon.html#month';
+                //    //else if (document.getElementById("Aquarius").checked == true && document.getElementById("month").checked == true)
+                //    //    window.location.href = 'Aquarius.html#month';
+                //    //else if (document.getElementById("Pisces").checked == true && document.getElementById("month").checked == true)
+                //    //    window.location.href = 'Pisces.html#month';
+
+                //    else window.alert("אנא בחר מזל וסוג תחזית");
+
+                //}
+
+                //function Horoskop() {
+                //    var idPeriod = $("#tablePeriod").attr("id");
+                //    var idSign = $("#sign").atrr("id");
+                //    return (idPeriod, idSign);
+                //}
+
+    </script>
     <style>
 
-      
+        body {
+            background-image: url("background.jpg");
+        }
         #header {
             padding: 5px 10px;
-            background-color: pink;
+            margin-right:100px;
+            color:aqua;
+           
         }
 
         img {
@@ -21,17 +109,18 @@
 
         #nav {
             padding: 20px 20px;
-            background-color:floralwhite
+            margin-right: 100px;
         }
 
         #star {
             width: 20px;
             height: 20px;
         }
-          
+
 
 
         ul {
+            margin-right: 100px;
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -42,11 +131,19 @@
             float: right;
         }
 
-        li a {
+            li a {
                 display: block;
-                color: mediumpurple;
+                color: white;
                 text-align: right;
                 text-decoration: none;
+            }
+
+            h3,h2{
+                color:aquamarine;
+                margin-right:300px;
+                font-size:large;
+                font-family:Arial
+
             }
 
 
@@ -55,7 +152,6 @@
             background-color: fuchsia;
             width: 800px;
             margin: 0 auto;
-            
         }
 
         #section {
@@ -63,25 +159,27 @@
             /*width: 630px;
             padding: 800px;
             background-color: bisque;*/
+            margin-right:100px;
         }
 
         #sidebar {
-            float: left;
-            width: 150px;
-            background-color: darkred;
+            float:left;
+            width:300px;
             margin: 0px;
+            margin-top:0px;
+            
         }
 
         #footer {
             clear: both;
             padding: 20px 20px;
             background: pink;
-            vertical-align:middle;
+            vertical-align: middle;
         }
 
             #footer p {
                 margin: 0;
-                text-align:center;
+                text-align: center;
             }
 
         li {
@@ -90,28 +188,28 @@
 
         a > img {
             width: 50px;
-            vertical-align:bottom;
+            /*vertical-align: bottom;*/
             /*float: right;*/
-            display:inline-block;
+            /*display: inline-block;*/
+            /*background-image: url("background.jpg");*/
             
         }
 
         table {
-            
             border-collapse: collapse;
             border-spacing: 0;
         }
 
 
-         a.img1:hover {
-                background-image: url(טלה.jpg);
-                color:green;
-            }
+        a>img:hover {
+            background-color:blue
+            
+        }
 
-         span {
-            vertical-align:top;
+        span {
+            vertical-align: top;
             display: inline-block;
-            color:black;
+            color: black;
         }
 
 
@@ -130,123 +228,138 @@
         }
 
 
-        #p text{
-            
-            position:center;
+        #p text {
+            position: center;
         }
-      
 
-        
+        attachment-full {
+   
+            width: 1025px;
+            height:307px;
+        }
+
+       
     </style>
-    </head>
-<body>
- 
-        <div id="header">
-            <img src="astrologywheel.jpg" alt="astrologywheel"> <h1>אסטרולוגיה שבועית ושנתית</h1>
+</head>
+<body >
 
-        </div>
+    
 
- 
-        <div id="nav">
-            <ul>
-                <li><a href="#home">עמוד הבית</a></li>
-                <li><a href="#about/">אודות</a></li>
-                <li><a href="#signs">מזלות</a></li>
-                <li><a href="#year">כוכבים</a></li>
-                <li><a href="#articles">מאמרים</a></li>
-                <li><a href="#blackmoon">ירח שחור</a></li>
-                <li><a href="#registration">הרשמה לאתר</a></li>
-                <li><a href="contact.html#contact">צור קשר</a></li>
-            </ul>
-        </div>
+    <div id="header">
+        <h1>אסטרולוגיה שבועית, חודשית ושנתית</h1>
+
+    </div>
 
 
-        <div id="section">
-            <h3 for="horoscope">בחר תחזית</h3>
-            <table>
-                <tr>
-                    <td>
-                        <input type="radio" name="period" value="week" checked/>
-                        <b>שבועית</b>
-                        <img id="star" src="Star.png" alt="כוכב" />
-                    </td>
-                   <td>
-                       <input  type="radio" name="period" value="month">
-                       <b>חודשית</b>
-                       <img id="star" src="Star.png" alt="כוכב" />
-                    </td>
-                    <td>
-                    <input  type="radio" name="period" value="year">
+    <div id="nav">
+        <ul>
+
+            <li><a href="#home">עמוד הבית</a></li>
+            <li><a href="#about/">אודות</a></li>
+            <li><a href="#signs">מזלות</a></li>
+            <li><a href="#year">כוכבים</a></li>
+            <li><a href="#articles">מאמרים</a></li>
+            <li><a href="#blackmoon">ירח שחור</a></li>
+            <li><a href="#registration">הרשמה לאתר</a></li>
+            <li><a href="contact.html#contact">צור קשר</a></li>
+        </ul>
+    </div>
+
+
+    <img src="astrologywheel.jpg" alt="astrologyWheel" title="astrologyWheel" style="width: 800px; height: 307px; margin-left: 400px; margin-right:0px; margin-top: 0px;">
+
+
+
+    <div id="sidebar" >
+        <h1>אייטמים אחרונים</h1>
+        <ul>
+            <li><a img src="אייטם1.jpg" name="אייטם1" value="אייטם1" href="אייטם1.jpg" alt="אייטם1"></a></li>
+            <li><a img src="אייטם2.jpg" value="אייטם2" href="אייטם2.jpg" alt="אייטם2"></a></li>
+            <li><a img src="אייטם3.jpg" value="אייטם3" href="אייטם3.jpg" alt="אייטם3"></a></li>
+            <li><a img src="אייטם4.jpg" value="אייטם4" href="אייטם4.jpg" alt="אייטם4"></a></li>
+            <li><a img src="Taurus.jpg" value="Taurus" href="Taurus.jpg" alt="Taurus"></a></li>
+
+        </ul>
+    </div>
+
+    <div id="section">
+        <h3 for="horoscope">בחר תחזית</h3>
+        <table>
+            <tr>
+                <td>
+                    <input type="radio" name="period" value="Week" id="period" />
+                    <b>שבועית</b>
+                    <img id="star" src="Star.png" alt="כוכב" />
+                </td>
+                <td>
+                    <input type="radio" name="period" value="Month" id="period" />
+                    <b>חודשית</b>
+                    <img id="star" src="Star.png" alt="כוכב" />
+                </td>
+                <td>
+                    <input type="radio" name="period" value="Year" id="period">
                     <b>שנתית</b>
                     <img id="star" src="Star.png" alt="כוכב" />
-                    </td>
-                </tr>
-            </table>
-               <!--<option value="year">שנתית</option>
-               <option value="month">חודשית</option>
-               <option value="week">שבועית</option>-->
-         <br />
-            <br />
-            <h3>בחר מזל</h3>
-            <table id="horoscope" cellpadding="10">
-                <tr>
-                    <th>טלה</th>
-                    <th>שור</th>
-                    <th>תאומים</th>
-                    <th>סרטן</th>
-                    <th>אריה</th>
-                    <th>בתולה</th>
-                    <th>מאזניים</th>
-                    <th>עקרב</th>
-                    <th>קשת</th>
-                    <th>גדי</th>
-                    <th>דלי</th>
-                    <th>דגים</th>
-                </tr>
-                <tr>
-                    <td><a value="week" href="Aries.html#AriesWeek"><img src="טלה.jpg" alt="טלה" /></a></td>
-                    <td><a value="week" href="Taurus.html#TaurusWeek"><img src="שור.jpg" alt="שור" /></a></td>
-                    <td><a value="week" href="Gemini.html#GeminiWeek"><img src="תאומים.jpg" alt="תאומים" /></a></td>
-                    <td><a value="week" href="Cancer.html#CancerWeek"><img src="סרטן.jpg" alt="סרטן" /></a></td>
-                    <td><a value="week" href="Leo.html#LeoWeek"><img src="אריה.jpg" alt="אריה" /></a></td>
-                    <td><a value="week" href="Virgo.html#VirgoWeek"><img src="בתולה.jpg" alt="בתולה" /></a></td>
-                    <td><a value="week" href="Libra.html#LibraWeek"><img src="מאזנים.jpg" alt="מאזניים" /></a></td>
-                    <td><a value="week" href="Scorpio.html#ScorpioWeek"><img src="עקרב.jpg" alt="עקרב" /></a></td>
-                    <td><a value="week" href="Sagittarius.html#SagittariusWeek"><img src="קשת.jpg" alt="קשת" /></a></td>
-                    <td><a value="week" href="Capricon.html#CapricornWeek"><img src="גדי.jpg" alt="גדי" /></a></td>
-                    <td><a value="week" href="Aquarious.html#AquariusWeek"><img src="דלי.png" alt="דלי" /></a></td>
-                    <td><a value="week" href="Pisces.html#PiscesWeek"><img src="דגים.jpg" alt="דגים" /></a></td>
-                </tr>
-            </table>
+                </td>
+            </tr>
+        </table>
 
-        </div>
+        <br />
+        <br />
+        <h3>בחר מזל</h3>
+        <table cellpadding="10">
+            <tr>
+                <th>
+                    <input type="radio" value="Aries" name="starSign" />
+                    <a id="sign" href="Aries.html" name="sign" /> טלה
+                </th>
+                <th><input type="radio" value="Taurus" name="sign" id="sign" href="Taurus.html" />שור</th>
+                <th><input type="radio" value="Gemini" name="sign" id="sign" /> תאומים</th>
+                <th><input type="radio" value="Cancer" name="sign" id="Cancer" />סרטן</th>
+                <th><input type="radio" value="Leo" name="sign" id="Leo" /> אריה</th>
+                <th><input type="radio" value="Virgo" name="sign" id="Virgo" />בתולה</th>
+                <th><input type="radio" value="Libra" name="sign" id="Libra" />מאזניים</th>
+                <th><input type="radio" value="Scorpio" name="sign" id="Scorpio" /> בתולה</th>
+                <th><input type="radio" value="Sagittarius" name="sign" id="Sagittarius" />קשת</th>
+                <th><input type="radio" value="Capricon" name="sign" id="Caparicon">גדי</th>
+                <th><input type="radio" value="Aquarious" name="sign" id="Aquarious">דלי</th>
+                <th><input type="radio" value="pisces" name="sign" id="Pisces">דגים</th>
+            </tr>
+            <tr>
+                <td><a name="signImage" value="Aries" href="Aries.html"> <img src="טלה.png" alt="טלה" /></a></td>
+                <td><a value="Taurus" name="signImage" href="Taurus.html"> <img src="שור.png" alt="שור" /></a></td>
+                <td><a value="Gemini" name="signImage" href="Gemini.html"><img src="תאומים.png" alt="תאומים" /></a></td>
+                <td><a value="Cancer" name="signImage" href="Cancer.html"><img src="סרטן.png" alt="סרטן" /></a></td>
+                <td><a value="Leo" name="signImage" href="Leo.html"><img src="אריה.png" alt="אריה" /></a></td>
+                <td><a value="Virgo" name="signImage" href="Virgo.html"><img src="בתולה.png" alt="בתולה" /></a></td>
+                <td><a value="Libra" name="signImage" href="Libra.html"><img src="מאזניים.png" alt="מאזניים" /></a></td>
+                <td><a value="Scorpio" name="signImage" href="Scorpio.html"><img src="עקרב.png" alt="עקרב" /></a></td>
+                <td><a value="Sagittarius" name="signImage" href="Sagittarius.html"><img src="קשת.png" alt="קשת" /></a></td>
+                <td><a value="Capricon" name="signImage" href="Capricon.html"><img src="גדי.png" alt="גדי" /></a></td>
+                <td><a value="Aquarious" name="signImage" href="Aquarious.html"><img src="דלי.png" alt="דלי" /></a></td>
+                <td><a value="Aquarious" name="signImage" href="Pisces.html"><img src="דגים.png" alt="דגים" /></a></td>
+            </tr>
+            <tr>
+                <!--<td><input type="radio" img src="טלה.jpg" alt="טלה" /></td>
+                <td><input type="radio" img src="שור.jpg" alt="שור" /></td>-->
 
-
-   
-            <div id="sidebar">
-                <h1>מה המזל שלך?</h1>
-                <ul>
-                    <!--<li><a href="/">פריט תפריט 1</a></li>
-                    <li><a href="/">פריט תפריט 2</a></li>
-                    <li><a href="/">פריט תפריט 1</a></li>
-                    <li><a href="/">פריט תפריט 2</a></li>
-                    <li><a href="/">פריט תפריט 1</a></li>
-                    <li><a href="/">פריט תפריט 2</a></li>
-                    <li><a href="/">פריט תפריט 1</a></li>
-                    <li><a href="/">פריט תפריט 2</a></li>
-                    <li><a href="/">פריט תפריט 1</a></li>
-                    <li><a href="/">פריט תפריט 2</a></li>
-                    <li><a href="/">פריט תפריט 1</a></li>
-                    <li><a href="/">פריט תפריט 2</a></li>-->
-                </ul>
-            </div>
+        </table>
+        <p>
+            <button onclick=redirect()>לתחזית</button>
 
 
-            <div id="footer" dir="ltr" >
-               <p> Copyright © 2019 by students All right reserved. </p>
-            </div>
-      
-    
+    </div>
+
+
+
+
+
+
+    <div id="footer" dir="ltr">
+        <p> Copyright © 2019 by students All right reserved. </p>
+    </div>
+
+
 </body>
 </html>
 

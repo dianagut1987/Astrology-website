@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        function redirect() {
+            var linkVar = document.getElementById('sign').getAttribute('href');
+            window.location.href = linkVar + "#" + $("input[name='starSign']:checked").val() + $("input[name='period']:checked").val();
+        }
+    </script>
+
+    <div id="section">
+        <h3 for="horoscope">choose horoscope</h3>
+        <table>
+            <tr>
+                <td>
+                    <input type="radio" name="period" value="week" id="week" checked />
+                    <b>'weekly</b>
+
+                <td>
+                    <input type="radio" name="period" value="month" id="month" />
+                    <b>monthly</b>
+
+                <td>
+                    <input type="radio" name="period" value="year" id="year">
+                    <b>yearly</b>
+                </td>
+            </tr>
+
+
+            <tr>
+            <td>
+                <a id="signStar" name="signImage" value="Aries" href="Aries.html"> <img src="טלה.jpg" alt="טלה" /></a>
+            </td>
+
+            </tr>
+
+        </table>
+</body>
+</html>

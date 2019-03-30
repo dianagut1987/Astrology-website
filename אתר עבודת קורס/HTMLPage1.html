@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function redirect() {
+            if (document.getElementById("Aries").checked == true && document.getElementById("month").checked == true)
+                window.location.hash = '#AriesMonth';
+            if (document.getElementById("Taurus").checked == true && document.getElementById("month").checked == true)
+                window.location.hash = '#TaurusMonth';
+   
+        }
+    </script>
+
+    <input type="radio" id="Taurus" />
+    <input type="radio" id="month" />
+    <button onclick=redirect()>לתחזית</button>
+
+
+</body>
+</html>
