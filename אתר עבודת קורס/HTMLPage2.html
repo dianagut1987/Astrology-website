@@ -7,39 +7,40 @@
 </head>
 <body>
 
-    <script>
-        function redirect() {
-            var linkVar = document.getElementById('sign').getAttribute('href');
-            window.location.href = linkVar + "#" + $("input[name='starSign']:checked").val() + $("input[name='period']:checked").val();
-        }
-    </script>
-
-    <div id="section">
-        <h3 for="horoscope">choose horoscope</h3>
-        <table>
-            <tr>
-                <td>
-                    <input type="radio" name="period" value="week" id="week" checked />
-                    <b>'weekly</b>
-
-                <td>
-                    <input type="radio" name="period" value="month" id="month" />
-                    <b>monthly</b>
-
-                <td>
-                    <input type="radio" name="period" value="year" id="year">
-                    <b>yearly</b>
-                </td>
-            </tr>
-
-
-            <tr>
+    function redirect() {
+    var href = document.getElementById("starSign").getAttribute('href');
+    window.location.href = href + "#" + $("input[name='sign']:checked").val() +
+    $("input[name='period']:checked").val();
+    }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <table>
+        <tr>
             <td>
-                <a id="signStar" name="signImage" value="Aries" href="Aries.html"> <img src="טלה.jpg" alt="טלה" /></a>
+                <input type="radio" name="period" value="Week" id="week" />
+                <b>weekly</b>
             </td>
+        </tr>
 
-            </tr>
 
-        </table>
+        <tr>
+            <td>
+
+        <tr>
+            <th><input type="radio" value="Aries" name="sign" id="Aries" /> Aries</th>
+        </tr>
+        <tr>
+            <td>
+                <a id=starSign value="Aries" href="Aries.html"> <img src="Aries.jpg" alt="Aries" /></a>
+            </td>
+        </tr>
+
+
+
+    </table>
+
+
+
+    <button onclick=redirect()>לתחזית</button>
+
 </body>
 </html>
