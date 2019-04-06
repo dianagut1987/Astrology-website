@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" dir="rtl"> 
+<head>
+    <title>עבודת סיכום</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function redirectFunction() {
+
+            var href = $("input[name='sign']:checked").val() + ".html";
+
+            if (href == "undefined.html" ||
+                !$("input[name='sign']").is(":checked") ||
+                !$("input[name='period']").is(":checked")) {
+                alert("please select sign and and horoscope");
+            }
+            else {
+                href += "#" + $("input[name='sign']:checked").val() +
+                    $("input[name='period']:checked").val()
+                console.log(href)
+                window.location.href = href;
+            }
+        }
+        $("#redirect").on("click", redirectFunction);
+
+
+    </script>
+
+    <style>
+
+
+        body {
+            background-image: url("background.jpg");
+        }
+
+        #header {
+            padding: 5px 10px;
+            margin-right: 100px;
+            color: aqua;
+        }
+
+        img {
+            width: 200px;
+            vertical-align: top;
+            float: left;
+            /*background-image: url(טלה.jpg);*/
+        }
+
+        #nav {
+            padding: 20px 20px;
+            margin-right: 100px;
+        }
+
+        #star {
+            width: 20px;
+            height: 20px;
+        }
+
+
+
+        ul {
+            margin-right: 100px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: right;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: right;
+                text-decoration: none;
+            }
+
+        h3, h2 {
+            color: aquamarine;
+            margin-right: 300px;
+            font-size: large;
+            font-family: Arial
+        }
+
+
+        #wraper {
+            display: block;
+            background-color: fuchsia;
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        #section {
+            float: right;
+            /*width: 630px;
+            padding: 800px;
+            background-color: bisque;*/
+            margin-right: 100px;
+        }
+
+        #sidebar {
+            float: left;
+            width: 300px;
+            margin: 0px;
+            margin-top: 0px;
+        }
+
+        #footer {
+            clear: both;
+            padding: 20px 20px;
+            background: pink;
+            vertical-align: middle;
+        }
+
+            #footer p {
+                margin: 0;
+                text-align: center;
+            }
+
+        li {
+            padding: 10px;
+        }
+
+        a > img {
+            width: 50px;
+            /*vertical-align: bottom;*/
+            /*float: right;*/
+            /*display: inline-block;*/
+            /*background-image: url("background.jpg");*/
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+
+        img#ch:hover {
+            /*color: blue;*/
+            fill: aqua;
+        }
+
+        span {
+            vertical-align: top;
+            display: inline-block;
+            color: black;
+        }
+
+
+        .signsign {
+            background-position: -1px -666px;
+            width: 35px;
+            height: 37px;
+        }
+
+
+        #horoscope table tr td a {
+            text-indent: -99999px !important;
+            display: flex;
+            margin: 0 auto;
+            white-space: nowrap;
+        }
+
+
+        #p text {
+            position: center;
+        }
+        #col {
+            font-size: 40px;
+        }
+
+        #zd:hover {
+            fill: red;
+        }
+        attachment-full {
+            width: 1025px;
+            height: 307px;
+        }
+        .fa-facebook:hover {
+            color: #3b5998;
+        }
+
+        .fa-twitter:hover {
+            color: #55acee;
+        }
+
+        .fa-google:hover {
+            color: #dd4b39;
+        }
+
+        .fa-instagram:hover {
+            color: #4c68d7;
+        }
+
+        h2#comment {
+            color: palevioletred;
+            margin-right: auto;
+        }
+
+        form#comment {
+            color: lightpink;
+            font: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+    <div id="header">
+        <h1>אסטרולוגיה שבועית, חודשית ושנתית</h1>
+
+    </div>
+
+
+    <div id="nav">
+        <ul>
+            <li><a href="#home">עמוד הבית</a></li>
+            <li><a href="About.html">אודות</a></li>
+            <li><a href="HoroscopYear.html">הורוסקופ שנתי לשנת 2018-2019</a></li>
+            <li><a href="Inforamtion.html">מידע על כל מזל</a></li>
+            <li><a href="WhatYourSign.html">מה המזל שלך?</a></li>
+            <li><a href="Compatibility.html">התאמה בין מזלות</a></li>
+            <li><a href="Registration.html">הרשמה לאתר</a></li>
+            <li><a href="Contact.html">צור קשר</a></li>
+        </ul>
+    </div>
+
+
+    <img src="astrologywheel.jpg" alt="astrologyWheel" title="astrologyWheel" style="width: 80%; height: 307px; margin-left: 100px; margin-right:100px; margin-top: 0px;">
+
+
+
+    <div id="sidebar">
+        <h1>אייטמים אחרונים</h1>
+        <ul>
+            <li><a img src="אייטם1.jpg" name="אייטם1" value="אייטם1" href="אייטם1.jpg" alt="אייטם1"></a></li>
+            <li><a img src="אייטם2.jpg" value="אייטם2" href="אייטם2.jpg" alt="אייטם2"></a></li>
+            <li><a img src="אייטם3.jpg" value="אייטם3" href="אייטם3.jpg" alt="אייטם3"></a></li>
+            <li><a img src="אייטם4.jpg" value="אייטם4" href="אייטם4.jpg" alt="אייטם4"></a></li>
+            <li><a img src="Taurus.jpg" value="Taurus" href="Taurus.jpg" alt="Taurus"></a></li>
+
+        </ul>
+    </div>
+
+    <div id="section">
+        <h3 for="horoscope">בחר תחזית</h3>
+        <table>
+            <tr>
+                <td>
+                    <input type="radio" name="period" value="Week" id="period" />
+                    <b>שבועית</b>
+                    <img id="star" src="media/Star.png" alt="כוכב" />
+                </td>
+                <td>
+                    <input type="radio" name="period" value="Month" id="period" />
+                    <b>חודשית</b>
+                    <img id="star" src="media/Star.png" alt="כוכב" />
+                </td>
+                <td>
+                    <input type="radio" name="period" value="Year" id="period">
+                    <b>שנתית</b>
+                    <img id="star" src="media/Star.png" alt="כוכב" />
+                </td>
+            </tr>
+        </table>
+
+
+
+        <br />
+        <br />
+        <h3>בחר מזל</h3>
+        <table cellpadding="10">
+            <tr>
+                <th><input type="radio" value="Aries" name="sign" /> <a id="sign" />טלה</th>
+                <th><input type="radio" value="Taurus" name="sign" id="sign" />שור</th>
+                <th><input type="radio" value="Gemini" name="sign" id="sign" /> תאומים</th>
+                <th><input type="radio" value="Cancer" name="sign" id="Cancer" />סרטן</th>
+                <th><input type="radio" value="Leo" name="sign" id="Leo" /> אריה</th>
+                <th><input type="radio" value="Virgo" name="sign" id="Virgo" />בתולה</th>
+                <th><input type="radio" value="Libra" name="sign" id="Libra" />מאזניים</th>
+                <th><input type="radio" value="Scorpio" name="sign" id="Scorpio" /> בתולה</th>
+                <th><input type="radio" value="Sagittarius" name="sign" id="Sagittarius" />קשת</th>
+                <th><input type="radio" value="Capricon" name="sign" id="Caparicon">גדי</th>
+                <th><input type="radio" value="Aquarious" name="sign" id="Aquarious">דלי</th>
+                <th><input type="radio" value="pisces" name="sign" id="Pisces">דגים</th>
+            </tr>
+            <tr>
+                <td id="col" align="center"><a value="Aries" name="signImage" href="Aries.html"><svg id='zd' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.01em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1025 1024"><path d="M960.232 320q-24 0-44-20t-20-44q0-56-32.5-92t-95.5-36q-31 0-77 51.5t-80.5 121-34.5 115.5v544q0 26-18.5 45t-45 19-45.5-19-19-45V416q0-46-34.5-115.5t-80.5-121-77-51.5q-63 0-95.5 36t-32.5 92q0 24-20 44t-44 20-44-20-20-44q0-109 70-182.5t186-73.5q32 0 68.5 21t70.5 56.5 62 73 55 79.5q27-42 55-79.5t62-73 70.5-56.5 68.5-21q116 0 186 73.5t70 182.5q0 24-20 44t-44 20z" /></svg></a></td>
+                <td id="col" align="center"><a value="Taurus" name="signImage" href="Taurus.html"><svg id='zd' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.01em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1025 1024"><path d="M992.754 192q-12 0-22-10t-10-22q0-13-21-22.5t-43-9.5q-16 0-31 6.5t-29.5 21.5-26.5 30-26.5 41.5-24.5 45.5-24 53.5-22 54-23 56.5q66 44 104.5 114.5t38.5 152.5q0 87-43 160.5T673.254 981t-160.5 43-160.5-43-116.5-116.5-43-160.5q0-82 38.5-152.5t104.5-114.5q-15-37-23-56.5t-22-54-24-53.5-24.5-45.5-26.5-41.5-26.5-30-29.5-21.5-31-6.5q-22 0-43 9.5t-21 22.5q0 12-10 22t-22 10-22-10-10-22q0-70 32.5-115t95.5-45q37 0 71.5 16.5t61.5 40.5 53 61.5 43.5 70 35.5 76 27 69 20 58.5q37-8 72-8t72 8q11-33 20-58.5t27-69 35.5-76 43.5-70 53-61.5 61.5-40.5 71.5-16.5q63 0 95.5 45t32.5 115q0 12-10 22t-22 10zm-672 512q0 80 56.5 136t136 56 135.5-56 56-136-56-136-135.5-56-136 56-56.5 136z" /></svg></a></td>
+                <td id="col" align="center"><a value="Gemini" name="signImage" href="Gemini.html"><svg id='zd' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.01em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1025 1024"><path d="M960.12 128h-128q-7 22-17.5 59t-28.5 138.5-18 186.5q0 54 6.5 113t16 105.5 19 84.5 16 60 6.5 21h128q26 0 45 18.5t19 45-18.5 45.5-45.5 19h-896q-26 0-45-19t-19-45.5 18.5-45 45.5-18.5h128q7-22 17.5-59t28.5-138.5 18-186.5q0-54-6.5-113t-16-105.5-19-84.5-16-60-6.5-21h-128q-26 0-45-18.5t-19-45T18.62 19t45.5-19h896q26 0 45 19t19 45.5-18.5 45-45.5 18.5zm-632 0q6 22 15.5 59t25 138.5 15.5 186.5q0 181-54 378l-2 6h368q-6-22-15.5-59t-25-138.5-15.5-186.5q0-181 54-378l2-6h-368z"</svg></a></td>
+                <td id="col" align="center"><a value="Cancer" name="signImage" href="Cancer.html"><svg id='zd' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path d="M544 960q32-64 32-160 92-53 161.5-129.5T847 499q-39 13-79 13-106 0-181-75t-75-181 75-181T768 0t181 75 75 181q0 100-28.5 198.5T919 634 809.5 783t-130 113T544 960zm224-832q-53 0-90.5 37.5T640 256t37.5 90.5T768 384t90.5-37.5T896 256t-37.5-90.5T768 128zM177 525q38-13 79-13 106 0 181 75t75 181-75 181-181 75-181-75T0 768q0-100 28.5-198.5T105 390t109.5-149 130-113T480 64q-32 64-32 160-92 53-161.5 129.5T177 525zm-49 243q0 53 37.5 90.5T256 896t90.5-37.5T384 768t-37.5-90.5T256 640t-90.5 37.5T128 768z" /></svg></a></td>
+                <td id="col" align="center"><a value="Leo" name="signImage" href="Leo.html"><svg id='zd' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M20 17a3 3 0 0 1-3 3 3.16 3.16 0 0 1-3-3c.162-1.611.497-3.2 1-4.74A23.2 23.2 0 0 0 16 7a5.14 5.14 0 0 0-5-5 5.14 5.14 0 0 0-5 5 19.07 19.07 0 0 0 1 4.48l.21.72A4 4 0 1 0 10 16a21.69 21.69 0 0 0-1.09-5.08A18.92 18.92 0 0 1 8 7a3.16 3.16 0 0 1 3-3 3.16 3.16 0 0 1 3 3 22.465 22.465 0 0 1-1 4.74A23.2 23.2 0 0 0 12 17a5.14 5.14 0 0 0 5 5 5 5 0 0 0 5-5h-2zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" /></svg></a></td>
+                <td id="col" align="center"><a value="Virgo" name="signImage" href="Virgo.html"><svg id='zd' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.01em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1025 1024"><path d="M920.046 778q-28 59-75 107l18 21q23 13 30 38t-6.5 47.5-39.5 29.5-50-6q-24-19-54-50-47 29-93.5 43.5t-73.5 14.5-45.5-18.5-18.5-45 18.5-45.5 45.5-19q40 0 93-28-29-55-29-104V223q0-39-28.5-67t-68-28-67.5 28-28 67v608q0 27-19 45.5t-45.5 18.5-45-18.5-18.5-45.5V223q0-39-28-67t-68-28-68 28-28 67v608q0 27-19 45.5t-45.5 18.5-45-18.5T.046 831V64q0-27 18.5-45.5T64.046 0q23 0 40.5 14.5t22.5 36.5q55-51 129-51 49 0 91 23.5t68 63.5q26-40 68.5-63.5t92.5-23.5q64 0 114.5 38.5t67.5 98.5q46-41 105-41 65 0 111 46t49 112v1q0 3 .5 32.5t.5 49-2 59-5.5 70.5-11.5 75-18.5 80.5-27.5 78.5-39 78zm-89-586q-64 0-64 95v408q0 35 14 75 32-41 53-86 43-95 61-225V287q0-95-64-95z" /></svg></a></td>
+                <td id="col" align="center"><a value="Libra" name="signImage" href="Libra.html"><svg id='zd' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M20 16v2h-7v-2.09a5.5 5.5 0 1 0-2 0V18H4v-2h2.92a7.42 7.42 0 0 1-2.42-5.5 7.5 7.5 0 0 1 15 0 7.42 7.42 0 0 1-2.42 5.5H20zm0 3H4v2h16v-2z" /></svg></a></td>
+                <td id="col" align="center"><a value="Scorpio" name="signImage" href="Scorpio.html"><svg id='zd' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.01em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1025 1024"><path d="M1018.06 913l-92 104q-6 7-15 7t-15-7v-58q-64-5-120.5-27t-96-66-39.5-102V224q0-40-28-68t-68-28-68 28-28 68v608q0 27-18.5 45.5t-45 18.5-45.5-18.5-19-45.5V224q0-40-28-68t-68-28-68 28-28 68v608q0 27-18.5 45.5t-45 18.5-45.5-18.5-19-45.5V64q0-26 19-45t45-19q23 0 40.5 14.5t22.5 36.5q55-51 129-51 49 0 91 23.5t68 63.5q27-40 69-63.5t92-23.5q76 0 131 52t60 127q1 7 1 13v504q0 34 13 60t34.5 40.5 40.5 21.5 40 11v-54q6-7 15-7t15 7l92 104q6 7 6 17t-6 17z" /></svg></a></td>
+                <td id="col" align="center"><a value="Sagittarius" name="signImage" href="Sagittarius.html"></a><svg id='zd' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M22 2v10h-2V5.41L10.41 15l2.3 2.29-1.42 1.42L9 16.41l-5.29 5.3-1.42-1.42L7.59 15l-2.3-2.29 1.42-1.42L9 13.59 18.59 4H12V2h10z" /></svg></td>
+                <td id="col" align="center"><a value="Capricon" name="signImage" href="Capricon.html"></a><svg id='zd' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.01em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1025 1024"><path d="M800.43 960q-92 0-160-65-94 129-256 129-26 0-45-19t-19-45.5 19-45 45-18.5q21 0 32.5-.5t31-4 33-11.5 31-21.5 33-36.5 31.5-54l-55-611q-58 62-97.5 224t-39.5 323q0 26-18.5 45t-45 19-45.5-19-19-45q0-129-25.5-261.5T160.43 219t-96-91q-26 0-45-19t-19-45.5 19-45 45-18.5q50 0 99.5 48t87.5 122 69 169q42-130 99.5-221T541.43 6q12-6 25-6 1 0 2.5.5t2 0 2.5-.5h3v1q50 5 64 63l45 492q56-44 115-44 93 0 158.5 65.5t65.5 158.5-65.5 158.5-158.5 65.5zm0-320q-37 0-66.5 41t-29.5 74q0 30 28.5 53.5t67.5 23.5q40 0 68-28t28-68-28-68-68-28z" /></svg></td>
+                <td id="col" align="center"><a value="Aquarious" name="signImage" href="Aquarious.html"></a><svg id='zd' xmlns="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.15em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1025 896"><path d="M905 352L761 161 564 359l-.5.5-.5.5-7 6-1 1-1.5 1.5-3.5 3.5-5 4q-4 2-10 4-10 4-21 4h-5q-8 0-16-3-7-2-15-7-4-3-5-3.5t-3.5-2-3.5-2.5q-10-10-15-26l-89-177-253 203q-19 19-45.5 19t-45-19T0 320.5 19 276L340 18q19-18 45-18t45 18q3 3 9 14l1 1 1 1q3 8 4 8l85 170L723 18q19-18 45.5-18T814 18q3 3 9 14v.5l1 .5 191 255q14 23 7 48.5t-30 39-48.5 6.5-38.5-30zM340 530q19-19 45-19t45 19q3 3 9 14h.5l.5 1 1 1q3 7 4 8l85 170 194-194q18-19 44.5-19t45.5 19q3 3 9 14l1 1 191 254q14 23 7 49t-30 39-48.5 6.5T905 864L761 673 564 870l-1 1-7 6q0 1-1 1.5t-1.5 1L550 883l-5 4q-4 2-10 4-10 4-21 4-3 1-5 1-7-1-16-3-7-3-15-8-4-2-5-3t-3.5-2.5-3.5-2.5q-10-9-15-25l-89-178-253 203q-19 19-45.5 19t-45-18.5-18.5-45T19 787z"</svg></td>
+                <td id="col" align="center"><a value="Aquarious" name="signImage" href="Pisces.html"><svg id='zd' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.01em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1025 1024"><path d="M960.43 128q-192 47-192 384t192 384q26 0 45 18.5t19 45-19 45.5-45 19q-96-16-166.5-80t-106.5-157-45-211h-260q-9 118-45 211t-106.5 157-166.5 80q-26 0-45-19t-19-45.5 19-45 45-18.5q192-47 192-384t-192-384q-26 0-45-19t-19-45.5 19-45 45-18.5q96 16 166.5 80t106.5 157 45 211h260q9-118 45-211t106.5-157 166.5-80q26 0 45 18.5t19 45.5-18.5 45.5-45.5 18.5z" /></svg></a></td>
+            </tr>
+            <tr>
+                <!--<td><input type="radio" img src="טלה.jpg" alt="טלה" /></td>
+                <td><input type="radio" img src="שור.jpg" alt="שור" /></td>-->
+
+        </table>
+        <p>
+            <button onclick="redirectFunction()" id="redirect">לתחזית</button>
+        </p>
+
+        <div>
+
+            <form id="comment" action="http://jkorpela.fi/cgi-bin/echo.cgi" method='post'>
+                <h2 id="comment"> השאר תגובה</h2><br />
+                <label for=stname> שם:</label> <br />
+                <input type='text' name='auther' id='auther' value-size="22" required autocomplete="on" style="width:50%; margin:0 0 5px 0; float:none; " /><br />
+
+                <label for=dbirth1>תאריך לידה</label><br /><input type="date" name="dbirth" id="dbirth" /><br />
+
+                <label for="signList">מזל:</label><br /><input list="signList" name="SignList" required><br />
+                <datalist id="signList">
+                    <option value="טלה">
+                    <option value="שור">
+                    <option value="תאומים">
+                    <option value="סרטן">
+                    <option value="אריה">
+                    <option value="בתולה">
+                    <option value="מאזניים">
+                    <option value="עקרב">
+                    <option value="קשת">
+                    <option value="גדי">
+                    <option value="דלי">
+                    <option value="דגים">
+                </datalist>
+
+
+                <label for=email> מייל:</label> <br />
+                <input type='email' name='email' id='email' value-size="22" required autocomplete="on" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" style="width:50%; margin:0 0 5px 0; float:none;" /><br />
+
+                <label for=comment>תגובה:</label> <br />
+                <textarea name="comment" id="comment" cols="54" rows="7" style="max-width: 1024px;" required placeholder="הכנס תגובה" minlength="10"></textarea><br />
+
+                <!--  <p><input type=submit value="שלח"><p>-->
+
+                <button onclick="send()" id="send">שלח תגובה</button>
+                <br />
+            </form>
+        </div>
+
+
+
+
+
+
+
+        <div id="footer" dir="ltr">
+            <div id="social links" dir="ltr">
+                <a class="fa fa-facebook" href="https://www.facebook.com"></a>
+                <a class="fa fa-twitter" href="https://www.twitter.com"></a>
+                <a class="fa fa-instagram" href="https://www.instagram.com"></a>
+                <a class="fa fa-google plus" href="https://www.googleplus.com"></a>
+            </div><br />
+            <p>
+                Copyright © 2019 by Diana Gutman and Stas Khitrin All right reserved. דיאנה גוטמן וסטס חיטרין במסגרת קורס תכנון ופיתוח בסביבת האינטרנט במחלקה למדעי המידע
+                באוניברסיטת בר-אילן
+            </p>
+        </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
