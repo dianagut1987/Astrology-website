@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+        function yourSign() {
+
+            var signDate = $("input[name='birthDate']").val();
+            tempsignDate = signDate.split("-").join("/");
+            newsignDate = tempsignDate.substring(5, 10);
+
+
+            var AriesDateFrom = "03/21";
+            var AriesDateTo = "04/20";
+
+
+            var TaurusDateFrom = "21/04"
+            var TaurusDateTo = "20/05"
+
+
+            var Ad1 = AriesDateFrom.split("/");
+            var Ad2 = AriesDateTo.split("/");
+            var Td1 = TaurusDateFrom.split("/");
+            var Td2 = TaurusDateTo.split("/");
+            var s = newsignDate.split("/");
+
+            if (s == "") {
+                alert("enter birthday");
+
+            }
+
+            if (s[1] >= Ad1[1] && s[0] >= Ad1[0] && s[1] <= Ad2[1] && s[0] <= Ad2[0]) {
+                //  if(s >= Ad1 && s < Ad2) {
+                //$("#output").val("Aries");
+                alert("Aries");
+            }
+            //else if (s >= Td1 && s < Td2) {
+            //    // document.getElementById("output").innerHTML = "Taurus";
+            //    alert("Taurus");
+            //{
+            else {
+
+                alert("not between");
+            }
+
+        }
+
+ </script>
+
+
+</head>
+
+<body>
+
+
+    <form>
+        <input type="date" name="birthDate">
+        <input type="submit" name="submit" value="submit" onclick="yourSign();">
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+</body>
+</html>

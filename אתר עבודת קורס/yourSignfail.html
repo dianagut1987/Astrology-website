@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>מה המזל שלך?</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"></script>
+
+
+
+
+
+
+
+</head>
+<body>
+    <div>
+        <form>
+
+            <label for=birthDate>תאריך לידה</label><br /><input type="date" name="birthDate" id="birthDate" /><br />
+
+            <!--<button onclick="yourSign()">שלח</button><br />-->
+            <input type="submit" name="submit" value="submit" onclick="yourSign();">
+
+            <label>המזל שלך הוא: </label><br />
+            <p id="output"></p>
+
+            <!--<input type="text" name="output" id="output" />-->
+
+        </form>
+
+
+
+    </div>
+
+
+    <script>
+
+        function yourSign() {
+
+            var signDate = $("input[name='birthDate']").val();
+            tempSignDate = signDate.split("-").join("/");
+            newSignDate = tempSignDate.substring(5, 10);
+
+            var AriesDateFrom = "21/03";
+            var AriesDateTo = "20/04";
+
+            var TaurusDateFrom = "21/04"
+            var TaurusDateTo = "20/05"
+
+            var GeminiDateFrom = "21/05";
+            var GeminiDateTo = "21/06";
+
+            var CancerDateFrom = "22/06";
+            var CancerDateTo = "22/07";
+
+            var LeoDateFrom = "23/07";
+            var LeoDateTo = "22/08";
+
+            var VirgoDateFrom = "23/08";
+            var VirgoDateTo = "22/09";
+
+            var LibraDateFrom = "23/09";
+            var LibraDateTo = "23/10";
+
+            var ScorpioDateFrom = "24/10";
+            var ScorpioDateTo = "21/11";
+
+            var SaggitariusDateFrom = "21/11";
+            var SaggitariusDateTo = "22/12";
+
+            var CapriconDateFrom = "22/12";
+            var CapriconDateTo = "20/01";
+
+            var AquariusDateFrom = "21/01";
+            var AquariusDateTo = "18/02";
+
+            var PiscesDateFrom = "19/02";
+            var PiscesDateTo = "20/03";
+
+
+            var Ad1 = AriesDateFrom.split("/");
+            var Ad2 = AriesDateTo.split("/");
+            var Td1 = TaurusDateFrom.split("/");
+            var Td2 = TaurusDateTo.split("/");
+            var Gd1 = GeminiDateFrom.split("/");
+            var Gd2 = GeminiDateTo.split("/");
+            var Cd1 = CancerDateFrom.split("/");
+            var Cd2 = CancerDateTo.split("/");
+            var Ld1 = LeoDateFrom.split("/");
+            var Ld2 = LeoDateTo.split("/");
+            var Vd1 = VirgoDateFrom.split("/");
+            var Vd2 = VirgoDateTo.split("/");
+            var Lid1 = LibraDateFrom.split("/");
+            var Lid2 = LibraDateTo.split("/");
+            var Sd1 = ScorpioDateFrom.split("/");
+            var Sd2 = ScorpioDateTo.split("/");
+            var Sad1 = SaggitariusDateFrom.split("/");
+            var Sad2 = SaggitariusDateTo.split("/");
+            var Cad1 = CapriconDateFrom.split("/");
+            var Cad2 = CapriconDateTo.split("/");
+            var Aqd1 = AquariusDateFrom.split("/");
+            var Aqd2 = AquariusDateTo.split("/");
+            var Pd1 = PiscesDateFrom.split("/");
+            var Pd2 = PiscesDateTo.split("/");
+
+
+            var s = newSignDate.split("/");
+            
+            var AriesFrom = new Date(Ad1[1], Ad2[0]);
+            var AriesTo = new Date(Ad2[1], Ad2[0]);
+            var TaurusFrom = new Date(Td1[1], Td2[0]);
+            var TaurusTo = new Date(Td1[1], Td2[0]);
+            var GeminiFrom = new Date(Gd1[1], Gd2[0]);
+            var GeminiTo= new Date(Gd1[1], Gd2[0]);
+            var CancerFrom = new Date(Cd1[1], Cd2[0]);
+            var CancerTo = new Date(Cd1[1], Cd2[0]);
+            var LeoFrom = new Date(Ld1[1], Ld2[0]);
+            var LeoTo = new Date(Ld1[1], Ld2[0]);
+            var VirgoFrom = new Date(Vd1[1], Vd2[0]);
+            var VirgoTo = new Date(Vd1[1], Vd2[0]);
+            var LibraFrom = new Date(Lid1[1], Lid2[0]);
+            var LibraTo = new Date(Lid1[1], Lid2[0]);
+            var ScorpioFrom = new Date(Sd1[1], Sd2[0]);
+            var ScorpioTo = new Date(Sd1[1], Sd2[0]);
+            var SagittariusFrom = new Date(Sad1[1], Sad2[0]);
+            var SagittariusTo = new Date(Sad1[1], Sad2[0]);
+            var CapriconFrom = new Date(Cad1[1], Cad2[0]);
+            var CapriconTo = new Date(Cad1[1], Cad2[0]);
+            var AquariusFrom = new Date(Aqd1[1], Aqd2[0]);
+            var AquariusTo= new Date(Aqd1[1], Aqd2[0]);
+            var PiscesFrom = new Date(Pd1[1], Pd2[0]);
+            var PiscesTo = new Date(Pd1[1], Pd2[0]);
+
+            signDate = new Date(s[1], s[0]);
+           
+
+
+            if (newSignDate == "") {
+                alert("הכנס תאריך לידה");
+            }
+
+            else if (s >= Ad1 && s < Ad2) {
+              //  document.getElementById("output").innerHTML = "Aries";
+                //output = "Aries";
+                   alert("Aries");
+            }
+          
+            else if (s >= Td1 && s < Td2) {
+               // document.getElementById("output").innerHTML = "Taurus";
+                alert("Taurus");
+
+            }
+            else if (signDate > GeminiFrom && signDate > GeminiTo) {
+                output = "Gemini";
+
+            }
+
+            else if (signDate > CancerFrom && signDate > CancerTo) {
+                output = "Cancer";
+            }
+
+            else if (signDate > LeoFrom && signDate > LeoTo) {
+                output = "Leo";
+            }
+
+            else if (signDate > VirgoFrom && signDate > VirgoTo) {
+                output = "Virgo";
+
+            }
+            else if (signDate > LibraFrom && signDate > LibraTo) {
+                output = "Libra";
+
+            }
+            else if (signDate > ScorpioFrom && signDate > ScorpioTo) {
+                output = "scorpio";
+            }
+
+            else if (signDate > SagittariusFrom && signDate > SagittariusTo) {
+                output = "Sagittarius";
+            }
+
+            else if (signDate > CapriconFrom && signDate > CapriconTo) {
+                output = "Capricon";
+            }
+            else if (signDate > AquariusFrom && signDate > AquariusTo) {
+                output = "Aquarius";
+            }
+            else (signDate > PiscesFrom && signDate > PiscesTo)
+            {
+                output = "Pisces";
+
+            }
+        }
+            //    console.log(output);
+            //  $("#output").val(output);
+
+
+
+
+    </script>
+
+</body>
+</html>

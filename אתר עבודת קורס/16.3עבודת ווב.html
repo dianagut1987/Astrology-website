@@ -59,8 +59,6 @@
             height: 20px;
         }
 
-
-
         ul {
             margin-right: 100px;
             list-style-type: none;
@@ -175,11 +173,26 @@
             width: 1025px;
             height: 307px;
         }
+
+        h2#comment{
+
+             color:palevioletred;
+             margin-right:auto;
+
+        }
+
+        form#comment{
+
+            color:lightpink;
+            font:antiquewhite
+
+
+        }
     </style>
 </head>
-<body >
+<body>
 
-    
+
 
     <div id="header">
         <h1>אסטרולוגיה שבועית, חודשית ושנתית</h1>
@@ -201,11 +214,11 @@
     </div>
 
 
-    <img src="astrologywheel.jpg" alt="astrologyWheel" title="astrologyWheel" style="width: 800px; height: 307px; margin-left: 400px; margin-right:0px; margin-top: 0px;">
+    <img src="astrologywheel.jpg" alt="astrologyWheel" title="astrologyWheel" style="width: 80%; height: 307px; margin-left: 100px; margin-right:100px; margin-top: 0px;">
 
 
 
-    <div id="sidebar" >
+    <div id="sidebar">
         <h1>אייטמים אחרונים</h1>
         <ul>
             <li><a img src="אייטם1.jpg" name="אייטם1" value="אייטם1" href="אייטם1.jpg" alt="אייטם1"></a></li>
@@ -247,7 +260,7 @@
         <table cellpadding="10">
             <tr>
                 <th><input type="radio" value="Aries" name="sign" /> <a id="sign" />טלה</th>
-                <th><input type="radio" value="Taurus" name="sign" id="sign"  />שור</th>
+                <th><input type="radio" value="Taurus" name="sign" id="sign" />שור</th>
                 <th><input type="radio" value="Gemini" name="sign" id="sign" /> תאומים</th>
                 <th><input type="radio" value="Cancer" name="sign" id="Cancer" />סרטן</th>
                 <th><input type="radio" value="Leo" name="sign" id="Leo" /> אריה</th>
@@ -261,7 +274,7 @@
             </tr>
             <tr>
                 <td><a name="signImage" value="Aries" href="Aries.html"> <img id="ch" src="media/טלה.svg" alt="טלה" /></a></td>
-                <td><a   value="Taurus" name="signImage" href="Taurus.html"> <img src="media/שור.png" alt="שור" /></a></td>
+                <td><a value="Taurus" name="signImage" href="Taurus.html"> <img src="media/שור.png" alt="שור" /></a></td>
                 <td><a value="Gemini" name="signImage" href="Gemini.html"><img src="media/תאומים.png" alt="תאומים" /></a></td>
                 <td><a value="Cancer" name="signImage" href="Cancer.html"><img src="media/סרטן.png" alt="סרטן" /></a></td>
                 <td><a value="Leo" name="signImage" href="Leo.html"><img src="media/אריה.png" alt="אריה" /></a></td>
@@ -280,12 +293,47 @@
         </table>
         <p>
             <button onclick="redirectFunction()" id="redirect">לתחזית</button>
-       </p>
+        </p>
 
-    </div>
+   <br>
+        <br>
+        <form id="comment" action="http://jkorpela.fi/cgi-bin/echo.cgi" method='post'>
+            <h2 id="comment"> השאר תגובה</h2><br />
+            <label for=stname> שם:</label> <br />
+            <input type='text' name='auther' id='auther' value-size="22" required autocomplete="on" style="width:50%; margin:0 0 5px 0; float:none; " /><br />
+
+            <label for=dbirth1>תאריך לידה</label><br /><input type="date" name="dbirth" id="dbirth" /><br />
+
+            <label for="signList">מזל:</label><br /><input list="signList" name="SignList" required><br />
+            <datalist id="signList">
+                <option value="טלה">
+                <option value="שור">
+                <option value="תאומים">
+                <option value="סרטן">
+                <option value="אריה">
+                <option value="בתולה">
+                <option value="מאזניים">
+                <option value="עקרב">
+                <option value="קשת">
+                <option value="גדי">
+                <option value="דלי">
+                <option value="דגים">
+            </datalist>
 
 
+            <label for=email> מייל:</label> <br />
+            <input type='email' name='email' id='email' value-size="22" required autocomplete="on" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" style="width:50%; margin:0 0 5px 0; float:none;" /><br />
 
+            <label for=comment>תגובה:</label> <br />
+            <textarea name="comment" id="comment" cols="54" rows="7" style="max-width: 1024px;" required placeholder="הכנס תגובה" minlength="10"></textarea><br />
+
+          <!--  <p><input type=submit value="שלח"><p>-->
+
+          <button onclick="send()" id="send">שלח תגובה</button>
+    <br />
+</form>
+</div>
+    
 
 
 
