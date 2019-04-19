@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <!--<meta charset="iso-8859-8">-->
+    <title>Competibility with other sign</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+    <h1>Compatibility with other sign</h1>
+    <form id="Match"></form>
+
+    <label for="yourSignList">your sign:</label><br /><input list="yourSignList" name="sign1" required><br />
+    <datalist id="yourSignList">
+        <option value="Aries">
+        <option value="Taurus">
+        <option value="Gemini">
+        <option value="Cancer">
+        <option value="Leo">
+        <option value="Virgo">
+        <option value="Libra">
+        <option value="Scorpio">
+        <option value="Saggitarius">
+        <option value="Capricon">
+        <option value="Aquarius">
+        <option value="Pisces">
+    </datalist><br/>
+
+
+
+    <label for="friendSignList">your friend sign:</label><br /><input list="friendSignList" name="sign2" required><br />
+    <datalist id="friendSignList">
+        <option value="Aries">
+        <option value="Taurus">
+        <option value="Gemini">
+        <option value="Cancer">
+        <option value="Leo">
+        <option value="Virgo">
+        <option value="Libra">
+        <option value="Scorpio">
+        <option value="Saggitarius">
+        <option value="Capricon">
+        <option value="Aquarius">
+        <option value="Pisces">
+    </datalist><br/>
+
+
+
+    <button type='submit' onclick="Match()">Done</button><br/>
+    <br />
+    <label dir="ltr" style="text-align:center;" for="output"> &nbsp; &nbsp;:התאמה</label><br/><br/>
+    <output id='output' text-align="center" dir='rtl'></output>
+    <form />
+
+    <script>
+        function Match() {
+            var signYours = $("input[name='sign1']").val();
+            var signFriend = $("input[name='sign2']").val();
+
+            if (signYours == "")
+                alert("please enter your sign");
+
+            if (signFriend=="")
+                alert("please enter your friend sign ");
+
+            $("#output").val(answer(signYours, signFriend));
+        }
+
+        
+
+        // Object indexed by your own sign:
+        const matches = {
+            Aries: {
+                High: ['Gemini', 'Leo', 'Saggitarius', 'Libra', 'Aquarius'],
+                Medium: ['Aries', 'Virgo', 'Capricon'],
+                Low: ['Pisces', 'Cancer', 'Scorpio','Taurus']
+            },
+
+            Taurus: {
+
+                High: ['Virgo', 'Scorpio', 'Cancer', 'Pisces', 'Capricon'],
+                Medium: ['Aquarius', 'Taurus', 'Libra'],
+                Low: ['Leo', 'Saggitarius','Gemini','Aries']
+            },
+
+            Gemini: {
+
+                High: ['Gemini', 'Leo', 'Saggitarius', 'Libra', 'Aquarius', 'Aries'],
+                Medium: ['Virgo', 'Capricon', 'Pisces'],
+                Low: ['Cancer', 'Scorpio','Taurus']
+
+            },
+
+            Cancer: {
+
+                High: ['scorpio', 'Pisces', 'Capricon', 'Taurus', 'Virgo'],
+                Medium: ['Cancer', 'Aquarius', 'Libra'],
+                Low: ['Leo', 'Aries', 'Saggitarius', 'Gemini']
+
+            },
+
+            Leo: {
+
+                Hign: ['Saggitarius', 'Gemini', 'Libra', 'Aquarius', 'Aries'],
+                Medium: ['Leo', 'Scorpio', 'Pisces'],
+                Low: ['Virgo', 'Capricon', 'Taurus', 'Cancer']
+
+            },
+
+
+            Virgo: {
+
+                High: ['Capricon', 'Taurus', 'Scorpio', 'Cancer', 'Pisces'],
+                Medium: ['Saggitarius', 'Gemini', 'Aquarius','Virgo'],
+                Low:['Leo','Libra','Aries' ]
+
+            },
+
+
+            Libra: {
+                Hign: ['Saggitarius', 'Gemini', 'Aquarius', 'Aries', 'Leo'],
+                Medium: ['Libra', 'Cancer', 'Pisces', 'Taurus'],
+                Low:['Virgo','Scorpio','Capricon']
+
+            },
+
+            Scorpio: {
+
+                High: ['Pisces', 'Capricon', 'Taurus', 'Virgo','Cancer'],
+                Medium: ['Aquarius','Scorpio','Aries','Leo','Gemini'],
+                Low: ['Libra','Saggitarius']
+
+            },
+
+
+            Saggitarius:{
+
+                Hign: ['Leo', 'Gemini', 'Libra', 'Aquarius', 'Aries'],
+                Medium: ['Saggitarius', 'Pisces', 'Cancer'],
+                Low: ['Taurus', 'Virgo', 'capricon', 'Scorpio']
+
+            },
+
+
+            Capricon: {
+
+                High: [ 'Taurus', 'Scorpio', 'Cancer', 'Pisces','Virgo'],
+                Medium: ['Capricon','Libra'],
+                Low: ['Leo', 'Gemini', 'Aquarius', 'Aries', 'Saggitarius']
+
+            },
+
+            Aquarius: {
+
+                Hign: ['Saggitarius', 'Gemini', 'Aries', 'Leo','Libra'],
+                Medium: ['Aquarius', 'Cancer', 'Taurus', 'Virgo', 'Scorpio'],
+                Low: ['Capricon', 'Pisces']
+                
+            },
+
+            Pisces: {
+
+                High: ['scorpio', 'Capricon', 'Taurus', 'Virgo', 'Cancer'],
+                Medium: ['Pisces', 'Libra', 'Leo', 'Saggitarius','Gemini'],
+                Low: [ 'Aries', 'aquarius']
+
+            },
+
+
+        };
+
+        const answer = (signYours, signFriend) => {//get the input of the user
+            const yourSign = matches[signYours];//find the sign in matches 
+            const foundMatch = Object.entries(yourSign).find(([_, arr]) => arr.includes(signFriend));//find the signFriend in matches
+            return document.getElementById("output").innerHTML = foundMatch[0];//send the output
+        };
+
+    </script>
+
+</body>
+</html >
